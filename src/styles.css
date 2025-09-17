@@ -1,0 +1,427 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Навигация */
+
+.nav {
+    border-bottom: 2px solid rgb(68, 38, 38);
+}
+
+.nav-content {
+    padding: 5px 20px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content img{
+    width: 100px;
+    height: auto;
+}
+
+.logo p{
+    font-family: 'Parisienne', cursive;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.logo {
+    max-width:0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    
+}
+
+.burger span{
+    background-color: rgb(68, 38, 38);
+    display: block;
+    height: 4px;
+    border-radius: 18%;
+}
+
+/* Боковое меню */
+
+.menu {
+    position: fixed;
+    right:-300px;
+    top:0;
+    height: 100%;
+    max-width: 300px;
+    padding: 60px 50px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    color: rgba(81, 60, 43, 0.873);
+    font-size: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 0px 12px -2px;
+    transition: right 0.5s ease;
+    z-index: 1000;
+}
+
+.menu.active{
+    right:0;
+}
+
+.menu p{
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li{
+    width: max-content;
+    margin: 18px;
+    padding: 6px 6px;
+    display: flex;
+    justify-content: first baseline;
+    gap: 14px;
+    transition: all 0.5s ease;
+}
+
+.menu li:hover{
+    font-size: 21px;
+    background-color: rgba(228, 222, 215, 0.603);
+    box-shadow: 0px 3px 10px -4px rgb(71, 57, 38);
+    border-radius: 8%;
+    transform: translateY(-3px);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.327);
+    z-index: 999;
+}
+
+.overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Представление команды */
+
+.team_name{
+    display: flex;
+    justify-content:space-between;
+    padding: 0 2px;
+    height: 650px;
+}
+
+.team_img{
+    background: linear-gradient(rgb(138, 127, 112) 99%,white);
+    width: 50%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+
+.team_img img{
+    width: 60%;
+}
+
+.team_text{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#beautiful_block{
+    width: 50%;
+    height: 80%;
+    background-color: rgba(225, 219, 214, 0.825);
+}
+
+.text {
+    position: absolute;
+    top: 30%;
+    left:8%;
+    font-family: "Playfair Display", serif;
+    color:  rgb(51, 29, 29);
+}
+
+.text h1{
+    font-size: 55px;
+    margin-bottom: 7%;
+}
+
+.text p{
+    font-size: 25px;
+    width: 65%;
+}
+
+/* Участники команды */
+
+.teammates{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 750px;
+}
+
+.teammates h1{
+    margin-top:90px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 55px;
+    letter-spacing: 5px;
+    color:  rgb(51, 29, 29);
+    font-family: "Playfair Display", serif;
+}
+
+.cards {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding: 0 5px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+.card:not(.active) {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    border-radius: 8px;
+    padding: 10px 5px;
+    box-shadow: 0px 2px 10px rgb(50, 48, 38);
+}
+
+.card.active {
+    transition: all 0.6s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    gap: 60px;
+    padding: 0;
+    flex: 3;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgb(50, 48, 38);
+}
+
+.card.card1{background-color: rgb(228, 224, 225);}
+.card.card2{background-color: rgb(192, 174, 163);}
+.card.card3{background-color: rgb(130, 105, 84);}
+.card.card4{background-color: rgb(73, 54, 40);}
+
+
+.card:not(.active) img{
+    border-radius: 50%;
+    width:150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card.active img{
+    width: 50%;
+    object-fit: cover;
+}
+
+
+.card:not(.active) .card_text{
+    margin: 20px 0;
+    color: rgb(51, 29, 29);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transition: all 0.6s ease;
+}
+
+.card.active .card_text{
+    color: rgb(51, 29, 29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 15px;
+    transition: all 0.6s ease;
+}
+
+.card:not(.active) .card_text .name{
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 4%;
+    transition: all 0.4s ease;
+}
+
+.card.active .card_text .name{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 4%;
+    transition: all 0.4s ease;
+}
+
+.card .card_text .description{
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.card.active .card_text .description{
+    margin-bottom: 8%;
+    transition: all 0.4s ease;
+}
+
+.card:not(.active) .more_desc{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+}
+
+.card.active .more_desc{
+    opacity: 1;
+    visibility: visible;
+    font-size: 18px;
+}
+
+.card .learnmore{
+    margin-top: 11%;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.card:not(.active) .card_text .learnmore{
+    width: 63%;
+    height: 40px;
+    font-size: 17px; 
+}
+
+.card.active .learnmore{
+    width: 69%;
+    height: 45px;
+    font-size: 19px;
+}
+
+
+
+.card.card4 .card_text, .card.card3 .card_text{
+    color: rgb(255, 243, 226);
+}
+
+.card.card1 .learnmore, .card.card2 .learnmore{
+    background-color: rgb(125, 111, 85);
+    color: rgb(255, 243, 226);
+}
+
+.card.card3 .learnmore, .card.card4 .learnmore{
+    background-color: rgb(192, 169, 134);
+}
+
+/* Цитата */
+.conclusion{
+    background-color: rgba(224, 219, 215, 0.893);
+    width: 100%;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#quote {
+    text-align: left;
+    /* margin-left: 200px; */
+    position: relative;
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    color:rgb(51, 29, 29);
+    z-index: 1;
+}
+
+#quote::before{
+    top:-105%;
+    left:-7%;
+    position:absolute;
+    content: "“";
+    font-size: 9rem;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#quote::after{
+    position: absolute;
+    top:-3%;
+    left:100%;
+    content: "”";
+    font-size: 9rem;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+#author{
+    color: rgb(51, 29, 29);
+    font-size: 40px;
+    font-weight: 200;
+    align-self: flex-end;
+    margin-right: 180px;
+    margin-top: 30px;
+    font-family: 'Caveat', cursive;
+}
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(45, 33, 25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    align-items: center;
+    padding-top: 20px;
+    font-family: 'Raleway', sans-serif;
+    color:  rgb(255, 243, 226);
+    font-size: 15px;
+}
+
+footer p{
+    margin: 6px 0;
+}
