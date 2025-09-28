@@ -62,9 +62,10 @@
 
 .menu {
     position: fixed;
-    right:-300px;
+    right:-100%;
     top:0;
     height: 100%;
+    width: 80%;
     max-width: 300px;
     padding: 60px 50px;
     background-color: rgb(255, 255, 255);
@@ -136,36 +137,46 @@
 
 .team_name{
     display: flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
+    flex-wrap: wrap;
     padding: 0 2px;
-    height: 650px;
+    /* height: 650px; */
+    min-height: 650px;
 }
 
 .team_img{
     background: linear-gradient(rgb(138, 127, 112) 99%,white);
-    width: 50%;
+    flex: 1 1 50%;
+    /* width: 50%; */
     display: flex;
     justify-content:center;
     align-items: center;
+    min-height: 650px;
 }
 
 
 .team_img img{
     width: 60%;
+    object-fit: cover;
+    max-width: 480px;
+    /* height: auto; */
 }
 
 .team_text{
     position: relative;
-    width: 50%;
+    /* width: 50%; */
+    flex: 1 1 50%;
     height: 100%;
     display: flex;
     justify-content:center;
     align-items: center;
+    min-height: 650px;
 }
 
 #beautiful_block{
     width: 50%;
     height: 80%;
+    min-height: 520px;
     background-color: rgba(225, 219, 214, 0.825);
 }
 
@@ -193,7 +204,7 @@
     display: flex;
     flex-direction: column;
     width:100%;
-    height: 750px;
+    min-height: 750px;
 }
 
 .teammates h1{
@@ -215,32 +226,41 @@
 }
 
 
+.card{
+    transition: all 0.6s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgb(50, 48, 38);
+    min-height: 540px;
+}
 
 .card:not(.active) {
     flex: 1;
-    height: 100%;
+    /* height: 100%;
     position: relative;
-    display: flex;
+    display: flex; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.6s ease;
-    border-radius: 8px;
+    /* transition: all 0.6s ease; */
+    /* border-radius: 8px; */
     padding: 10px 5px;
-    box-shadow: 0px 2px 10px rgb(50, 48, 38);
+    /* box-shadow: 0px 2px 10px rgb(50, 48, 38); */
 }
 
 .card.active {
-    transition: all 0.6s ease;
+    /* transition: all 0.6s ease;
     position: relative;
     height: 100%;
-    display: flex;
+    display: flex; */
     gap: 60px;
     padding: 0;
     flex: 3;
-    border-radius: 8px;
-    box-shadow: 0px 2px 10px rgb(50, 48, 38);
+    /* border-radius: 8px; */
+    /* box-shadow: 0px 2px 10px rgb(50, 48, 38); */
 }
 
 .card.card1{background-color: rgb(228, 224, 225);}
@@ -358,7 +378,7 @@
 .conclusion{
     background-color: rgba(224, 219, 215, 0.893);
     width: 100%;
-    height: 650px;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,4 +444,74 @@ footer{
 
 footer p{
     margin: 6px 0;
+}
+
+@media (max-width: 768px) {
+    .team_name{
+        flex-direction: column;
+    }
+    .team_img, .team_text {
+        flex: 1 1 100%;
+        max-width: 100%;
+        /* padding: 2rem 0; */
+    }
+    .team_img img {
+        width: 75%;
+    }
+    #beautiful_block{
+        min-height: 400px;
+        width: 60%;
+    }
+    .text{
+        top:28%;
+        left:12%;
+    }
+    .text h1{
+        font-size: 48px;
+    }
+    .text p{
+        font-size: 25px;
+        width: 98%;
+    }
+
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card:not(.active){
+        min-width: 470px;
+    }
+    .card:not(.active) .learnmore{
+        min-height: 50px;
+        max-width: 190px;
+    }
+    .card:not(.active) img{
+        width: 200px;
+        height: 200px;
+    }
+
+    #quote{
+        font-size: 40px;
+        max-width: 400px;
+        padding-left: 15px;
+    }
+    #quote::before{
+        top:-60%;
+        left:-9%;
+        font-size: 8rem;
+    }
+    #quote::after{
+        top:48%;
+        left:90%;
+        font-size: 8rem;
+    }
+    #author{
+        font-size: 33px;
+        margin-right: 30px;
+        margin-top: 40px;
+    }
+    footer{
+        font-size: 13px;
+    }
 }
