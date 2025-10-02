@@ -7,7 +7,7 @@ main {
 
 .text {
     position: absolute;
-    top: 30%;
+    top: 20%;
     left:8%;
     font-family: "Playfair Display", serif;
     font-style: italic;
@@ -71,6 +71,50 @@ main {
     background-repeat: no-repeat;
 }
 
+.stone {
+    position: absolute;
+    top: 830px;
+    left: -100px;
+    width: 700px;
+    height: 500px;
+    background-image: url("images/stone.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+.stone:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+} 
+
+.butterfly1 {
+    position: absolute;
+    top: 1630px;
+    left: 100px;
+    width: 300px;
+    height: 300px;
+    background-image: url("images/мотылёк1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.butterfly2 {
+    position: absolute;
+    top: 1630px;
+    left: 1540px;
+    width: 300px;
+    height: 300px;
+    background-image: url("images/мотылёк3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 /* карусель */
 
@@ -81,7 +125,9 @@ main {
 }
 
 .carousel_section h2 {
-    color: white;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: rgb(51, 29, 29);
     margin-bottom: 40px;
     font-size: 2.5rem;
 }
@@ -134,4 +180,128 @@ main {
 
 .next {
     right: 20px;
+}
+
+
+/* адаптивность */
+@media (min-width: 1024px) {
+    .text h1 {
+        font-size: 60px;
+    }
+
+    .text h2 {
+        font-size: 40px;
+    }
+
+    .vika_name {
+        min-height: 800px;
+    }
+
+    .vika_background_img {
+        min-height: 800px;
+    }
+
+    .vika_text {
+        min-height: 800px;
+    }
+
+    .carousel {
+        max-width: 1000px;
+    }
+
+    .carousel_photo {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        min-height: auto;
+    }
+
+    .text {
+        position: static;
+        text-align: center;
+        padding: 30px 20px;
+        width: auto;
+        left: auto;
+        top: auto;
+    }
+
+    .text h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .text h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .text li {
+        font-size: 18 px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .vika_name {
+        flex-direction: column;
+        min-height: auto;
+        padding: 0;
+    }
+
+    .vika_text {
+        flex: 1 1 100%;
+        min-height: 50vh;
+        order: 2;
+    }
+
+    .vika_background_img {
+        flex: 1 1 100%;
+        min-height: 50vh;
+        height: 50vh;
+        order: 1;
+    }
+
+    .second_photo {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 90%;
+        height: 300px;
+        margin: 20px auto;
+        max-width: 400px;
+    }
+
+    .carousel_section {
+        padding: 40px 15px;
+    }
+
+    .carousel_section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+
+    .carousel {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    .carousel_photo {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
 }
