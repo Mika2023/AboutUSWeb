@@ -270,15 +270,16 @@ main {
     }
 
     .second_photo {
-        position: relative;
+        position: fixed;
         top: auto;
         left: auto;
-        width: 90%;
-        height: 300px;
-        margin: -50px auto 20px;
-        max-width: 400px;
+        width: 70%;
+        height: 200px;
+        margin: 20px auto;
+        max-width: 300px;
         z-index: 2;
         order: 3;
+        transform: translateY(-60px);
     }
 
     .butterfly1,
@@ -301,7 +302,7 @@ main {
     }
 
     .carousel_section h2 {
-        font-size: 1.8rem;
+        font-size: 32px;
         margin-bottom: 25px;
     }
 
