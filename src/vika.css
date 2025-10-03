@@ -217,12 +217,14 @@ main {
 @media (max-width: 768px) {
     .main {
         min-height: auto;
+        width: 100%;
+        overflow: hidden;
     }
 
     .text {
         position: static;
         text-align: center;
-        padding: 30px 20px;
+        padding: 0;
         width: auto;
         left: auto;
         top: auto;
@@ -239,7 +241,7 @@ main {
     }
     
     .text li {
-        font-size: 18 px;
+        font-size: 18px;
         margin-bottom: 15px;
         text-align: left;
     }
@@ -248,19 +250,23 @@ main {
         flex-direction: column;
         min-height: auto;
         padding: 0;
+        position: relative;
     }
 
     .vika_text {
         flex: 1 1 100%;
-        min-height: 50vh;
-        order: 2;
+        min-height: auto;
+        order: 1;
+        position: static;
+        padding: 30px 20px;
     }
 
     .vika_background_img {
         flex: 1 1 100%;
         min-height: 50vh;
         height: 50vh;
-        order: 1;
+        order: 2;
+        position: relative;
     }
 
     .second_photo {
@@ -269,12 +275,29 @@ main {
         left: auto;
         width: 90%;
         height: 300px;
-        margin: 20px auto;
+        margin: -50px auto 20px;
         max-width: 400px;
+        z-index: 2;
+        order: 3;
+    }
+
+    .butterfly1,
+    .butterfly2 {
+        display: none;
+    }
+
+    .stone {
+        position: relative;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
     }
 
     .carousel_section {
         padding: 40px 15px;
+        order: 4;
     }
 
     .carousel_section h2 {
