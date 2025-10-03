@@ -30,7 +30,7 @@
         <p>БОКОВОЕ МЕНЮ!</p>
         <ul>
             <li><i class="fa-solid fa-house"></i><a href="index.html">ГЛАВНАЯ</a></li>
-            <li><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
+            <li onclick="active_meme()"><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
             <li><i class="fa-solid fa-user"></i>О КАТЕ</li>
             <li><i class="fa-solid fa-user"></i><a href="sonyaPage.html">О СОНЕ</a></li>
             <li><i class="fa-solid fa-user"></i><a href="vika.html">О ВИКЕ</a></li>
@@ -49,6 +49,11 @@
             </div>
             <div class="sonya_img"><img src="src/images/Sonya.jpg" alt="Моя фотография"></div>
         </section>
+        <div class="meme">
+            <img src="./src/images/RianGosling.jpg">
+            <button class="closeMeme" onclick="active_meme()"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="overlayMeme"></div>
         <section class="sonya_facts" id="sonya_facts">
             <h2>5 фактов обо мне</h2>
 
