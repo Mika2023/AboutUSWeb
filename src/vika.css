@@ -270,11 +270,13 @@ main {
     }
 
     .second_photo {
-        position: relative;
-        width: 60%;
-        height: 180px;
-        margin: -80px auto 10px;
-        max-width: 250px;
+        position: absolute;
+        top: 50px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 55%;
+        height: 160px;
+        max-width: 240px;
         z-index: 2;
         order: 3;
     }
