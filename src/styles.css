@@ -458,6 +458,15 @@ footer p{
     margin: 6px 0;
 }
 
+a{
+    text-decoration: none;
+    color: rgb(222, 193, 153);
+}
+
+a:visited{
+    color:rgb(162, 150, 129);
+}
+
 @media (max-width: 768px) {
     .team_name{
         flex-direction: column;
@@ -492,7 +501,7 @@ footer p{
     }
 
     .card{
-        min-width: 470px;
+        width: 100%;
     }
     .card.active{
         gap: 30px;
