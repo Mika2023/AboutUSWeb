@@ -142,3 +142,99 @@
 .fact_link:hover {
     color: rgb(125, 111, 85);
 }
+
+@media (max-width: 768px) {
+    .sonya_welcome {
+        flex-direction: column;
+        min-height: auto;
+        padding: 20px 0;
+    }
+    
+    .sonya_img, 
+    .sonya_text {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .sonya_img img {
+        width: 85%;
+        max-width: 300px;
+    }
+    
+    .s_text {
+        position: static;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .s_text h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .s_text p {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+    
+    .sonya_btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+    
+    .sonya_facts {
+        padding: 20px 0;
+        min-height: auto;
+    }
+    
+    .sonya_facts h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+        padding: 0 15px;
+    }
+    
+    .fact {
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+        padding: 0 20px;
+        width: 90%;
+    }
+    
+    .fact_left,
+    .fact_right {
+        flex-direction: column;
+    }
+    
+    .fact_content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .fact_content h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+    
+    .fact_content p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .fact_image {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .fact_image img {
+        max-width: 100%;
+    }
+    footer{
+        font-size: 13px;
+    }
+}
