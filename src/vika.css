@@ -215,19 +215,27 @@ main {
 }
 
 @media (max-width: 768px) {
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .main {
         min-height: auto;
         width: 100%;
         overflow: hidden;
+        padding: 0;
+        margin: 0;
     }
 
     .text {
         position: static;
         text-align: center;
-        padding: 0;
-        width: auto;
+        padding: 20px 15px;
+        width: 100%;
         left: auto;
         top: auto;
+        box-sizing: border-box;
     }
 
     .text h1 {
@@ -251,6 +259,7 @@ main {
         min-height: auto;
         padding: 0;
         position: relative;
+        width: 100%;
     }
 
     .vika_text {
@@ -259,6 +268,8 @@ main {
         order: 1;
         position: static;
         padding: 30px 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .vika_background_img {
@@ -267,6 +278,7 @@ main {
         height: 50vh;
         order: 2;
         position: relative;
+        width: 100%;
     }
 
     .second_photo {
@@ -296,6 +308,8 @@ main {
     .carousel_section {
         padding: 40px 15px;
         order: 4;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .carousel_section h2 {
@@ -306,6 +320,7 @@ main {
     .carousel {
         max-width: 100%;
         border-radius: 10px;
+        margin: 0 auto;
     }
 
     .carousel_photo {
