@@ -28,7 +28,7 @@
         <p>БОКОВОЕ МЕНЮ!</p>
         <ul>
             <li><i class="fa-solid fa-house"></i><a href="index.html">ГЛАВНАЯ</a></li>
-            <li><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
+            <li onclick="active_meme()"><i class="fa-solid fa-user"></i>О ЮЛЕ</li>
             <li><i class="fa-solid fa-user"></i>О КАТЕ</li>
             <li><i class="fa-solid fa-user"></i><a href="sonyaPage.html">О СОНЕ</a></li>
             <li><i class="fa-solid fa-user"></i><a href="vika.html">О ВИКЕ</a></li>
@@ -46,6 +46,11 @@
             </div>
             <div class="team_img"><img src="src/images/photo_2025-02-04_10-56-50(2).jpg"></div>
         </section>
+        <div class="meme">
+            <img src="./src/images/RianGosling.jpg">
+            <button class="closeMeme" onclick="active_meme()"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="overlayMeme"></div>
         <section class="teammates">
             <h1>НАША КОМАНДА</h1>
             <div class="cards">
@@ -55,7 +60,7 @@
                         <p class="name">Юлия Серышева</p>
                         <p class="description">Кьют прогер</p>
                         <p class="more_desc">Написала эту страничку ляляля</p>
-                        <button class="learnmore">Подробнее</button>
+                        <button class="learnmore" onclick="active_meme()">Подробнее</button>
                     </div>
                 </div>
 
