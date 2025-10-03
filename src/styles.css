@@ -491,8 +491,11 @@ footer p{
         align-items: center;
     }
 
-    .card:not(.active){
+    .card{
         min-width: 470px;
+    }
+    .card.active{
+        gap: 30px;
     }
     .card:not(.active) .learnmore{
         min-height: 50px;
