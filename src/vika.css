@@ -3,15 +3,19 @@ main {
     margin: 0;
     color: aliceblue;
     min-height: 650px;
+    position: relative;
+    overflow: hidden;
 }
 
 .text {
     position: absolute;
     top: 20%;
-    left:8%;
+    left: 8%;
     font-family: "Playfair Display", serif;
     font-style: italic;
     color:  rgb(51, 29, 29);
+    max-width: 600px;
+    z-index: 3;
 }
 
 .text h1{
@@ -47,6 +51,7 @@ main {
     padding: 0 2px;
     /* height: 650px; */
     min-height: 650px;
+    position: relative;
 }
 
 .vika_text{
@@ -61,28 +66,35 @@ main {
 
 .second_photo {
     position: absolute;
-    top: 300px;
-    left: 1150px;
-    width: 700px;
-    height: 500px;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-width: 500px;
+    height: 60%;
+    max-height: 400px;
     background-image: url("images/vika_page_1.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: 2;
 }
 
 .stone {
     position: absolute;
-    top: 830px;
-    left: -100px;
-    width: 700px;
-    height: 500px;
+    bottom: 10%;
+    left: 5%;
+    width: 30%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1/0.7;
     background-image: url("images/stone.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     transition: all 0.5s ease;
     cursor: pointer;
+    z-index: 3;
 }
 
 
@@ -93,24 +105,24 @@ main {
 
 .butterfly1 {
     position: absolute;
-    top: 1630px;
-    left: 100px;
-    width: 300px;
-    height: 300px;
+    bottom: 10%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
     background-image: url("images/мотылёк1.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .butterfly2 {
     position: absolute;
-    top: 1630px;
-    left: 1540px;
-    width: 300px;
-    height: 300px;
+    bottom: 10%;
+    right: 5%;
+    width: 150px;
+    height: 150px;
     background-image: url("images/мотылёк3.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -182,67 +194,26 @@ main {
     right: 20px;
 }
 
-
-/* адаптивность */
-@media (min-width: 1024px) {
-    .text h1 {
-        font-size: 60px;
-    }
-
-    .text h2 {
-        font-size: 40px;
-    }
-
-    .vika_name {
-        min-height: 800px;
-    }
-
-    .vika_background_img {
-        min-height: 800px;
-    }
-
-    .vika_text {
-        min-height: 800px;
-    }
-
-    .carousel {
-        max-width: 1000px;
-    }
-
-    .carousel_photo {
-        height: 500px;
-    }
-}
-
 @media (max-width: 768px) {
-    body{
-        width: 100%;
-        overflow-x: hidden;
-    }
-
     .main {
         min-height: auto;
-        width: 100%;
-        overflow: hidden;
-        padding: 0;
-        margin: 0;
     }
-
+    
     .text {
         position: static;
         text-align: center;
-        padding: 20px 15px;
+        padding: 40px 20px;
         width: 100%;
+        max-width: none;
         left: auto;
         top: auto;
-        box-sizing: border-box;
     }
-
+    
     .text h1 {
         font-size: 32px;
         margin-bottom: 20px;
     }
-
+    
     .text h2 {
         font-size: 24px;
         margin-bottom: 20px;
@@ -258,75 +229,64 @@ main {
         flex-direction: column;
         min-height: auto;
         padding: 0;
-        position: relative;
-        width: 100%;
     }
-
-    .vika_text {
-        flex: 1 1 100%;
-        min-height: auto;
-        order: 1;
-        position: static;
-        padding: 30px 20px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
+    
     .vika_background_img {
         flex: 1 1 100%;
         min-height: 50vh;
         height: 50vh;
+        order: 1;
+    }
+    
+    .vika_text {
+        flex: 1 1 100%;
+        min-height: auto;
         order: 2;
-        position: relative;
-        width: 100%;
+        position: static;
+        padding: 30px 20px;
     }
 
     .second_photo {
         position: relative;
-        width: 60%;
-        height: 180px;
-        margin: -80px auto 10px;
-        max-width: 250px;
-        z-index: 2;
+        width: 80%;
+        max-width: 300px;
+        height: 200px;
+        margin: -80px auto 20px;
+        top: auto;
+        right: auto;
+        left: auto;
+        transform: none;
         order: 3;
+    }
+    
+    .stone {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        margin: 20px auto;
+        bottom: auto;
+        left: auto;
     }
 
     .butterfly1,
     .butterfly2 {
         display: none;
     }
-
-    .stone {
-        position: relative;
-        bottom: 20px;
-        right: 20px;
-        width: 60px;
-        height: 60px;
-        z-index: 1000;
-    }
-
+    
     .carousel_section {
         padding: 40px 15px;
         order: 4;
-        width: 100%;
-        box-sizing: border-box;
     }
-
+    
     .carousel_section h2 {
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 25px;
     }
-
-    .carousel {
-        max-width: 100%;
-        border-radius: 10px;
-        margin: 0 auto;
-    }
-
+    
     .carousel_photo {
         height: 250px;
     }
-
+    
     .carousel-btn {
         width: 40px;
         height: 40px;
@@ -336,7 +296,7 @@ main {
     .prev {
         left: 10px;
     }
-
+    
     .next {
         right: 10px;
     }
