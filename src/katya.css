@@ -200,14 +200,28 @@ footer a {
   color: #a36bff;
 }
 
+.about {
+  display: flex;
+  gap: 20px; 
+}
+
+.tabs .tab-content {
+  display: flex;
+  gap: 20px;
+}
+
 @media (max-width: 768px) {
   .about {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: column; 
   }
 
-  .menu {
-    justify-content: flex-start;
+  .tabs .tab-content {
+    flex-direction: column; 
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr; 
   }
 }
+
 
