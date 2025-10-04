@@ -68,7 +68,7 @@ h1 span {
 
 .about-content {
   flex: 1;
-  max-width: 60%;
+  max-width: 80%;
 }
 
 .side-list {
@@ -78,7 +78,8 @@ h1 span {
 }
 
 .menu {
-  flex: 0 0 200px;            
+  flex: 2;
+  max-width: 30%;         
 }
 
 .menu li {
